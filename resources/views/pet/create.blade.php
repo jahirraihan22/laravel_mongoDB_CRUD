@@ -1,3 +1,5 @@
+<!-- carcreate.blade.php -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,36 +12,29 @@
   </head>
   <body>
     <div class="container">
-      <h2>Edit A Form</h2><br/>
+      <h2>Laravel MongoDB CRUD Tutorial With Example</h2><br/>
       <div class="container">
     </div>
-      <form method="post" action="{{action('PetController@create', $pet->id)}}">
+      <form method="post" action="{{ route('pet.store') }}">
         @csrf
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
-            <label for="Carcompany">Car Company:</label>
-            <input type="text" class="form-control" name="carcompany" value="{{$car->carcompany}}">
+            <label for="name">Pet Name:</label>
+            <input type="text" class="form-control" name="name">
           </div>
         </div>
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
-            <label for="Model">Model:</label>
-            <input type="text" class="form-control" name="model" value="{{$car->model}}">
+            <label for="number">Number:</label>
+            <input type="text" class="form-control" name="number">
           </div>
         </div>
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
-            <label for="Price">Price:</label>
-            <input type="text" class="form-control" name="price" value="{{$car->price}}">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
-            <button type="submit" class="btn btn-success">Update</button>
+            <button type="submit" class="btn btn-success">Submit</button>
           </div>
         </div>
       </form>
