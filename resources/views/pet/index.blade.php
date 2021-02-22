@@ -3,13 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Pet List</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-  
+    <link rel="stylesheet" href="{{  asset('css/app.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   </head>
   <body>
+    <div class="container">
+      <div class="row p-5">
+        <a href="{{ route('car') }}" class="btn btn-success">Car</a>
+        <a href="{{ route('pet') }}" class="btn btn-success">Pet</a>
+      </div>
+    </div>
     <div class="container">
     <br />
     @if (Session::has('success'))
@@ -28,7 +34,7 @@
       </tr>
     </thead>
     <tbody>
-      
+
       @foreach($pets as $pet)
       <tr>
         <td>{{$pet->id}}</td>

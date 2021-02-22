@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
     
-Route::get('/','CarController@index');
+Route::get('/','CarController@index')->name('car');
 Route::middleware('auth')->group(function () {
     Route::get('add','CarController@create');
     Route::post('add','CarController@store');

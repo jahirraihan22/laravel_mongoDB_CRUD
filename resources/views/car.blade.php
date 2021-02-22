@@ -11,6 +11,12 @@
   </head>
   <body>
     <div class="container">
+      <div class="row mt-5">
+        <a href="{{ route('car') }}" class="btn btn-success">Car</a>
+        <a href="{{ route('pet') }}" class="btn btn-success">Pet</a>
+      </div>
+    </div>
+    <div class="container">
     <br />
     @if (\Session::has('success'))
       <div class="alert alert-success">
@@ -24,7 +30,8 @@
         <th>Company</th>
         <th>Model</th>
         <th>Price</th>
-        <th colspan="2">Action</th>
+        <th>Edit</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
